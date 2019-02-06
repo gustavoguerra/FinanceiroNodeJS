@@ -2,11 +2,24 @@
 	<html lang="pt-br">
 		<head>
 			<meta charset="utf-8"/>
-			<title>Formulário de cadastro de Notícia</title>
+			<title>Formulario de Login</title>
 		</head>
 	<body>
 
-		<h1>Adicionar notícia</h1>
-
+		<table>
+			<tr>
+				<td>ID</td>
+				<td>Nome</td>
+				<td>Email</td>
+				<td>Data</td>
+			</tr>
+		<% for(var i=0; i< result.length; i++) { %>
+			<tr>
+				<td><%= valor[i].ID %></td>
+				<td><%= valor[i].USERNAME%></td>
+				<td><%= valor[i].EMAIL%></td>
+				<td><%= valor[i].DATATIME%></td>
+			</tr>
+		<% } %>	
 	</body>
 </html>
