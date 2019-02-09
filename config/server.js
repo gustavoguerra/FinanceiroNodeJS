@@ -1,13 +1,15 @@
-var express = require('express');
+var app = require('express')();
 var consign = require('consign');
 
-var app = express();
-app.set('view engine','ejs');
+
+app.set('view engine','ejs'); // motor de geração de view
 app.set('views','./app/views');
 
 consign()
-    .include('app/routes')
-    .then('config/dbconection.js')
-    .into(app);
+.include('app/routes')
+.then('config/dbconection.js')
+.into(app);
+
+
 
 module.exports = app;
